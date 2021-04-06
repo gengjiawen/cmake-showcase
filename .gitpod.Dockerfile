@@ -6,3 +6,5 @@ FROM gitpod/workspace-full
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 RUN sudo apt update && sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabi qemu -y
+
+RUN echo "fish" >> ~/.bashrc
