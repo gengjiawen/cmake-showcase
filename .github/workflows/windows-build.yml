@@ -1,5 +1,9 @@
 name: build-windows
 
+on: 
+  push:
+  pull_request:
+
 jobs:
   build-windows:
     strategy:
@@ -9,10 +13,6 @@ jobs:
     runs-on: ${{ matrix.windows }}
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
       - name: Install deps
         run: choco install nasm
       - name: Environment Information
