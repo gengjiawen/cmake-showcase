@@ -18,6 +18,7 @@ jobs:
       - name: Environment Information
         run: npx envinfo
       - name: Build and run
+        shell: powershell
         run: |
           cd predefined-macro/
           mkdir ./build
