@@ -13,16 +13,13 @@ jobs:
     runs-on: ${{ matrix.windows }}
     steps:
       - uses: actions/checkout@v2
-      - name: Install deps
-        run: choco install nasm
-      - name: Environment Information
-        run: npx envinfo
       - name: Build and run
-        shell: powershell
         run: |
           cd predefined-macro/
           mkdir ./build
           cd ./build
           cmake ..
           cmake --build .
-          ./macro_out
+          Debug/macro_out
+      - name: Environment Information
+        run: npx envinfo
