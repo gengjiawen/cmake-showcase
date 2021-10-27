@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  idea-build:
+    build: ./
+    container_name: 'clion-workshop'
+    # restart: always
+    tty: true
+    ports:
+      - "8887:8887"
+    cap_add:
+      - SYS_PTRACE
+    volumes:
+      - .:/pwd
+      # - ./projector-docker:/home/projector-user
+      - $HOME/.local:/root/.local
