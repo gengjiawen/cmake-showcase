@@ -6,6 +6,7 @@ Release/
 *.log
 *.out
 package-lock.json
+cmake-build-debug
 
 .idea/
 .vscode/

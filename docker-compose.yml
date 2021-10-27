@@ -12,5 +12,5 @@ services:
       - SYS_PTRACE
     volumes:
       - .:/pwd
-      # - ./projector-docker:/home/projector-user
+      - ~/.idea/config:/root/.config
       - $HOME/.local:/root/.local
