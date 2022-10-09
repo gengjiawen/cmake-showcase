@@ -4,4 +4,4 @@ image:
 tasks:
   - init: yarn install
   - init: sudo apt update && sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabi qemu qemu-user -y
-  - init: docker-compose build
+  - command: docker-compose build
