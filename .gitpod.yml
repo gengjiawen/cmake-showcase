@@ -1,7 +1,7 @@
-image:
-  file: .gitpod.Dockerfile
+# image:
+#   file: .gitpod.Dockerfile
 
 tasks:
-  - init: yarn install
+  - init: pnpm i
   - init: sudo apt update && sudo apt install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabi qemu qemu-user -y
   - command: docker-compose build
