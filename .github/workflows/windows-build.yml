@@ -9,7 +9,7 @@ jobs:
   build-windows:
     strategy:
       matrix:
-        windows: [windows-2019, windows-2022]
+        windows: [windows-2022]
       fail-fast: false
     runs-on: ${{ matrix.windows }}
     steps:
